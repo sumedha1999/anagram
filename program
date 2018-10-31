@@ -1,0 +1,33 @@
+//anagram//
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+main()
+{
+	char strg[10],str[10];
+	int found=0;
+	int i,j,a;
+	printf("enter the first string");
+	scanf("%s",strg);
+	printf("enter second string");
+	scanf("%s",str);
+	a=strlen(str);
+	if(strlen(strg)!=strlen(str))
+	{
+		printf("not anagram");
+		exit(0);
+	}
+	for(i=0;i<a;i++)
+	{
+		for(j=0;j<a;j++)
+		{
+			if(strg[i]==str[j])
+				found=found+1;
+		}
+	}
+	if(found==a)
+		printf("it is an anagram");
+	else
+		printf("it is not an anangram");
+}
